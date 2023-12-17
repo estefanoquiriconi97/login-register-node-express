@@ -11,11 +11,7 @@ const validation = require('../middlewares/validateRegisterMiddleware');
 
 //Formulario de registros 
 router.get('/register', userController.register);
-router.post('/register', [
-    body('fullName').isEmpty().withMessage('El nombre completo es requerido'),
-    body('email').isEmpty().withMessage('El email es requerido'),
-    body('password').isEmpty().withMessage('El password es requerido')
-], userController.processRegister);
+router.post('/register', uploadFile.single('image'), validation, userController.processRegister);
 
 //Formulario de Login
 router.get('/login', userController.login);

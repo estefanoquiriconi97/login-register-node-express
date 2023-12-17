@@ -7,17 +7,16 @@ const userController = {
     },
 
     processRegister : (req, res) => {
-        // const resultValidation = validationResult(req);
+        const resultValidation = validationResult(req);
 
-        // if(resultValidation.errors.length > 0) {
-        //     console.log(req.body);
-        //     return res.render('register', {
-        //         errors : resultValidation.mapped(),
-        //         oldData : req.body
-        //     });
-        // }
-
-        // console.log(req.body);
+        if(resultValidation.errors.length > 0) {
+            console.log(req.body);
+            console.log(resultValidation.mapped());
+            return res.render('register', {
+                errors : resultValidation.mapped(),
+                oldData : req.body
+            });
+        }
 
         User.create(req.body);
 
