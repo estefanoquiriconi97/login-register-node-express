@@ -1,1 +1,14 @@
-[]
+[
+ {
+  "id": 1
+ },
+ {
+  "id": 2
+ },
+ {
+  "id": 3,
+  "fullName": "Estéfano Quiriconi",
+  "email": "estefanoquiriconi@gmail.com",
+  "password": "123"
+ }
+]

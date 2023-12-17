@@ -1,4 +1,4 @@
-const { validationResult } = require('express-validation');
+const { validationResult } = require('express-validator');
 const User = require('../models/User');
 
 const userController = {
@@ -7,14 +7,17 @@ const userController = {
     },
 
     processRegister : (req, res) => {
-        const resultValidation = validationResult(req);
+        // const resultValidation = validationResult(req);
 
-        if(validationResult.errors.length > 0) {
-            return res.render('register', {
-                errors : resultValidation.mapped(),
-                oldData : req.body
-            });
-        }
+        // if(resultValidation.errors.length > 0) {
+        //     console.log(req.body);
+        //     return res.render('register', {
+        //         errors : resultValidation.mapped(),
+        //         oldData : req.body
+        //     });
+        // }
+
+        // console.log(req.body);
 
         User.create(req.body);
 
