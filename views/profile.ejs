@@ -6,7 +6,10 @@
     <title>Profile</title>
 </head>
 <body>
-    <h1>PROFILE</h1>
-    <a href="/">HOME</a>
+    <h1>Hi <%= locals.user ? user.fullName : null %></h1>
+    <img src="/images/avatars/<%= locals.user ? user.image : null %>" alt="">
+    <br>
+    <br>
+    <p><%= locals.user ? user.email : null%></p>
 </body>
 </html>

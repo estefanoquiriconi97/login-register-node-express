@@ -1,1 +1,23 @@
-[]
+[
+ {
+  "id": 1,
+  "fullName": "Estéfano Quiriconi",
+  "email": "estefanoquiriconi@gmail.com",
+  "password": "$2a$10$AAt7uMb6bWelnDsvEoWNGOs.RoMYcPTMmX5dVdfeLCIevv1qaUjES",
+  "image": "image-1702825993989.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "Estéfano Quiriconi",
+  "email": "estefanoquiriconi2@gmail.com",
+  "password": "$2a$10$98LZTh0PWx3utIoW5YBAPOag6NtPP6abtaF8e8xVNx1xXhWcwWnIG",
+  "image": "image-1702826867933.jpg"
+ },
+ {
+  "id": 3,
+  "fullName": "Tano",
+  "email": "tano@gmail.com",
+  "password": "$2a$10$UhAmWMzSK9zTniby.obD4OHimOelIeVtchqAScIJtsh2kWIsruWyK",
+  "image": "image-1702827762933.jpg"
+ }
+]
