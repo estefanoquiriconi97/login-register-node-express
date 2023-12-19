@@ -1,7 +1,9 @@
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const fs = require('fs');
 
 const User = require('../models/User');
+const path = require('path');
 
 const userController = {
     register : (req, res) => {
@@ -12,6 +14,8 @@ const userController = {
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0) {
+            //Eliminar la imagen que se guardó porque no se pasaron las validaciones
+            fs.unlinkSync(path.resolve(__dirname, '../public/images/avatars/' + req.file.filename));
             return res.render('register', {
                 errors : resultValidation.mapped(),
                 oldData : req.body
